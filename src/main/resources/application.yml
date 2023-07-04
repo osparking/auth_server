@@ -1,0 +1,23 @@
+server:
+  port : 9000
+
+spring:
+  profiles:
+    active:
+    - prod
+    
+---
+spring:           
+  config:
+    activate:
+      on-profile: prod
+  h2:
+    console:
+      enabled: true # 기본 값: false   
+      path: /h2-console # 기본 값: h2-console
+  datasource:
+    generate-unique-name: false
+#    name: testdb # 기본 값 : testdb
+    username: soap # 기본 값 : sa
+    password: 1234 # 기본 값 : (없음)
+    
